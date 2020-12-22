@@ -1,20 +1,24 @@
 module.exports = {
-  title: '打发无聊的旧时光xxx jjj',
-  description: 'Jxxxx',
-  head: [
-    ['link', { rel: 'icon', href: './logo.png' }]
-  ],
+  title: 'VuePress 标题',
+  description: 'VuePress 描述',
+
   themeConfig: {
-    logo: './icon.png',
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Guide', link: '/guide/' },
-      { text: 'External', link: 'https://google.com' },
-    ],
-    sidebar: [
-      '/',
-      '/page-a',
-      ['/page-b', 'Explicit link text']
+      {
+        text: '技术',
+        ariaLabel: 'Language Menu',
+        items: [
+          {text: 'iOS',link: '../posts/tech/iOS/iOS组件化实践.md'}
+        ]
+      },
+      {
+        text: '杂谈',
+        link: './'
+      },
+      {
+        text: '关于我',
+        link: './'
+      }
     ]
   }
 }
