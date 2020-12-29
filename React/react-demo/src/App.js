@@ -1,12 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
-import Clock from './Compoents/Clock'
-
-
-function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
-}
+import Clock from "./Compoents/Clock";
 
 function App() {
   return (
@@ -14,7 +9,6 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          <myheader/>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
@@ -26,7 +20,7 @@ function App() {
           Learn React
         </a>
       </header>
-        <Clock date={new Date()}/>
+      <Clock date={new Date()} />
     </div>
   );
 }

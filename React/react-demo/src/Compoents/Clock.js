@@ -9,6 +9,8 @@ export default class Clock extends Component {
 
     this.state = {
       date: props.date,
+      text: "I am a react demo",
+      useTop: false,
     };
   }
 
@@ -20,6 +22,13 @@ export default class Clock extends Component {
     }, 2000);
   }
 
+  changeTop = () => {
+    console.log(this.state);
+    this.setState({
+      useTop: !this.state.useTop,
+    });
+  };
+
   render() {
     return (
       <div>
@@ -28,6 +37,11 @@ export default class Clock extends Component {
           <div>DidMount {this.state.didMount ? "yes" : "no"}</div>
           <div>prop: {this.props.date.toLocaleTimeString()}</div>
           <div>state: {this.state.date.toLocaleTimeString()}</div>
+          <button onClick={this.changeTop}>
+            {this.state.useTop
+              ? this.state.text.toLocaleUpperCase()
+              : this.state.text.toLocaleLowerCase()}
+          </button>
         </p>
       </div>
     );
